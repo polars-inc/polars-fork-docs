@@ -106,6 +106,15 @@ nav:
       - releases/upgrade/0.20.md
       - releases/upgrade/0.19.md
 
+  - Polars Cloud:
+    - polars-cloud/index.md
+    - polars-cloud/getting-started.md
+    - polars-cloud/architecture.md
+    - Client:
+      - polars-cloud/client/index.md
+      - polars-cloud/client/authentication.md
+
+
 not_in_nav: |
   /_build/
 validation:
