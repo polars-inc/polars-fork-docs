@@ -113,6 +113,10 @@ nav:
     - Client:
       - polars-cloud/client/index.md
       - polars-cloud/client/authentication.md
+      - polars-cloud/client/api.md
+      - polars-cloud/client/sdk.md
+      - polars-cloud/client/cli.md
+    - polars-cloud/faq.md
 
 
 not_in_nav: |
