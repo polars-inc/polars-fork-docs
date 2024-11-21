@@ -5,8 +5,8 @@ when interacting with Polars Cloud programmatically, e.g. in a CI/CD pipeline.
 
 ## Installation
 
-The CLI is available automatically after installing the Python package.
-It can be called with the `plc` command:
+The CLI is available automatically after installing the Python package. It can be called with the
+`plc` command:
 
 ```bash
 pip install polars-cloud
@@ -15,8 +15,7 @@ plc --version
 
 ## Usage
 
-The CLI offers the same functionality as the Python SDK.
-Below are a few examples of CLI usage.
+The CLI offers the same functionality as the Python SDK. Below are a few examples of CLI usage.
 
 Log in through the browser:
 

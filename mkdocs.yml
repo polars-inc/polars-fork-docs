@@ -110,6 +110,7 @@ nav:
     - polars-cloud/index.md
     - polars-cloud/getting-started.md
     - polars-cloud/architecture.md
+    - polars-cloud/workspaces.md
     - Client:
       - polars-cloud/client/index.md
       - polars-cloud/client/authentication.md

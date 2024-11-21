@@ -1,3 +1,3 @@
-# Polars Cloud
+# Polars Cloud overview
 
-Hello!
+Hello! This is a fancy landing page for Polars Cloud.
