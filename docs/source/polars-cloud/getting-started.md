@@ -29,15 +29,18 @@ supports Amazon Web Services (AWS) as a cloud provider. The following are requir
 
 ## Authenticating with Polars Cloud
 
-
-
 ```python
 import polars_cloud as plc
 
 plc.login()
 ```
 
-For additional details on authentication, check out the [authentication](./client/authentication.md) section.
+```python
+plc login
+```
+
+For additional details on authentication, check out the [authentication](./client/authentication.md)
+section.
 
 ## Defining a compute context
 
@@ -47,14 +50,7 @@ done using the `ComputeContext` class.
 ```python
 import polars_cloud as plc
 
-compute = plc.ComputeContext(instance_type="t2.micro")
-```
-
-It's possible to set the context as the default for this workspace. That way, we don't have to
-define it next time.
-
-```
-compute.set_default()
+plc.set_compute_context(instance_type="t2.micro")
 ```
 
 ## Running a query
@@ -82,19 +78,21 @@ To run this query on Polars Cloud, we replace the `collect` call with Polars Clo
 import polars as pl
 import polars_cloud as plc
 
+plc.set_compute_context(instance_type="t2.micro")
+
 df = pl.DataFrame({"a": [1, 2, 3], "b": [4, 4, 5]})
 
 lf = df.lazy().with_columns(pl.col("a").max().over("b").alias("c"))
 
 uri = "s3://my-bucket/result.parquet"
-query = plc.spawn_query(lf, uri=uri)
-result = query.await_result()
+query = plc.spawn(lf, uri=uri)
+result = await query.await_result()
 print(result)
 ```
 
 Note that we have changed the `collect` call into two new calls:
 
-- `spawn_query` starts a new compute cluster using the defaults we just defined, then sends the
+- `spawn_blocking` starts a new compute cluster using the defaults we just defined, then sends the
   query to Polars Cloud to be executed. The result is written to the given location on S3.
 - `await_result` polls the query until it has finished running and returns a small number of rows of
   the result.
