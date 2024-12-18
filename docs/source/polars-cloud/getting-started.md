@@ -19,6 +19,8 @@ supports Amazon Web Services (AWS) as a cloud provider. The following are requir
 - An AWS account with certain minimum permissions (see [workspaces](./workspaces.md) for details).
 - An AWS S3 bucket. Polars Cloud queries always write their result to an S3 bucket.
 
+ADD INSTRUCTIONS POLARS CLOUD PIP INSTALL
+
 ## Creating an account
 
 (Some instructions on which URL to go / what buttons to click)
@@ -108,4 +110,4 @@ The compute cluster started for this query will automatically shut down after th
 However, the query result data on your S3 bucket will persist, so make sure to delete it if you do
 not want to incur any additional fees.
 
-For more examples and advanced usage, check out the [Client](./client/) section.
+For more examples and advanced usage, check out the [Client](./client/index.md) section.
