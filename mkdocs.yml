@@ -119,15 +119,14 @@ nav:
                 - polars-cloud/workspace/add-members.md
                 - polars-cloud/workspace/add-delete-workspace.md
                 - polars-cloud/workspace/set-defaults.md
-          - User Guide:
-                - polars-cloud/explain/concepts.md
-                - polars-cloud/explain/authentication.md
           - Providers:
                 - AWS:
                       - polars-cloud/providers/aws/infrastructure.md
                       - polars-cloud/providers/aws/permissions.md
           - Integrations:
                 - polars-cloud/integrations/airflow.md
+          - User Guide:
+                - polars-cloud/explain/authentication.md
           - Misc:
                 - polars-cloud/glossary.md
                 - polars-cloud/cli.md
