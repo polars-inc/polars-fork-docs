@@ -4,7 +4,7 @@ import polars_cloud as pc
 ctx = pc.ComputeContext(
     workspace="your-workspace",
     instance_type="t2.micro",
-    cluster_size="2",
+    cluster_size=2,
     labels=["docs"],
 )
 # --8<-- [end:compute]
@@ -23,6 +23,8 @@ ctx = pc.ComputeContext(
 
 # --8<-- [start:set-compute]
 ctx = pc.ComputeContext(
-    workspace="your-workspace", instance_type="t2.micro", cluster_size=2
+    workspace="your-workspace",
+    instance_type="t2.micro",
+    cluster_size=2
 )
 # --8<-- [end:set-compute]
